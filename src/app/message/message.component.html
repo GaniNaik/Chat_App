@@ -1,0 +1,18 @@
+<h1 appHighlight>Hello {{loginuser}}</h1>
+
+
+<ul *ngFor="let user of username" >
+      <li   (click)="getsingleuser(user.username)">{{user.username}}</li>
+     
+</ul>
+
+<h6> {{nouser}} </h6>
+
+
+<textarea [(ngModel)]="message" [disabled]='!selectedNote'  placeholder="Enter a message" style="width: 43%;height: 27%;"></textarea>
+
+{{message1}}
+
+
+
+<button class="btn btn-success" (click)="sendmessage(loginuser,username,message)">send</button>
